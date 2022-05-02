@@ -17,6 +17,7 @@ const injectContext = Component => {
         useEffect(() => {
             state.actions.getUsers();
             state.actions.getPosts();
+            state.actions.getFetchUser();
         }, [])
 
         return (

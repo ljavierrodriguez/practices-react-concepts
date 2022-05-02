@@ -19,8 +19,8 @@ function Home() {
 
   
   */
- const { theme } = useContext(Context);
- const { store, actions} = useContext(AppContext);
+  const { theme } = useContext(Context);
+  const { store, actions } = useContext(AppContext);
   const [name, setName] = useState("");
   const [age, setAge] = useState(10);
   const [errors, setErrors] = useState({});
@@ -74,7 +74,7 @@ function Home() {
 
 
   const getData = (url, options) => {
-    
+
   }
 
   const handleChange = () => {
@@ -96,14 +96,14 @@ function Home() {
       errors['password'] = 'El password no puede estar vacio';
     } else if (!/^[a-zA-Z0-9@!-&*$?=]+$/.test(password.value)) {
       errors['password'] = 'El password solo puede contener numeros ';
-    } else if(password.value === username.value){
+    } else if (password.value === username.value) {
       errors['password'] = 'El username y el password no pueden ser los mismos ';
     }
 
     if (errors.username || errors.password) {
       setErrors(errors);
       enviar.disabled = false;
-    }else{
+    } else {
       setErrors(errors);
     }
 
